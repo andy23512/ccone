@@ -1,0 +1,7 @@
+<div class="queue">
+  <div class="item" *ngFor="let item of queue">{{ item }}</div>
+</div>
+<ccone-layout
+  [layout]="bpmfLayout"
+  [highlightedKeys]="[queue[0]]"
+></ccone-layout>

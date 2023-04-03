@@ -1,0 +1,13 @@
+<div class="queue">
+  <div class="item" *ngFor="let item of queue; index as i">
+    {{ item }}
+    <ng-container *ngIf="i === 0">
+      <br />
+      {{ (currentInput | bpmf) || '&nbsp;' }}
+    </ng-container>
+  </div>
+</div>
+<ccone-layout
+  [layout]="bpmfLayout"
+  [highlightedKeys]="highLightKeys"
+></ccone-layout>
