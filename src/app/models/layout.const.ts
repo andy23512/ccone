@@ -76,7 +76,7 @@ export const NEED_REMAP_KEYS: string[] = [
 
 export const REMAPPED_LAYOUT: Layout<string> = {
   left: {
-    thumbEnd: { e: '/', s: '[', w: '(', n: '-', c: '⎋' },
+    thumbEnd: { e: '/', s: '[', w: '(', n: '-' },
     thumbMid: { e: 'w', s: 'z', w: 'g', n: '#' },
     thumbTip: { e: 'k', s: 'c', w: 'm', n: 'v' },
     index: { e: 'r', s: 'e', w: '|', n: '⌫' },
@@ -91,7 +91,7 @@ export const REMAPPED_LAYOUT: Layout<string> = {
     index: { w: 'a', s: 't', e: '(R)␣', n: '⌤' },
     middle: { w: 'l', s: 'n', e: 'j', n: '}' },
     ring: { w: 'y', s: 's', e: ';', n: '⌃' },
-    ringMid: { w: '>', s: '-', e: 'RW', n: '⇥' },
+    ringMid: { w: '>', s: '⎋', e: 'RW', n: '⇥' },
   },
 };
 
