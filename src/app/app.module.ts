@@ -12,6 +12,7 @@ import { CamelToKebabPipe } from './pipes/camel-to-kebab.pipe';
 import { SymbolTrainingPageComponent } from './pages/symbol-training-page/symbol-training-page.component';
 import { ChordTrainingPageComponent } from './pages/chord-training-page/chord-training-page.component';
 import { BpmfPipe } from './pipes/bpmf.pipe';
+import { ComboMeterComponent } from './components/combo-meter/combo-meter.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BpmfPipe } from './pipes/bpmf.pipe';
     SymbolTrainingPageComponent,
     ChordTrainingPageComponent,
     BpmfPipe,
+    ComboMeterComponent,
   ],
   imports: [
     BrowserModule,

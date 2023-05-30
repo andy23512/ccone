@@ -10,6 +10,7 @@ import { Layout } from '../../models/layout.models';
 export class LayoutComponent {
   @Input() public layout: Layout<BPMFSymbol | string> = {};
   @Input() public highlightedKeys: (BPMFSymbol | string)[] = [];
+  @Input() public colorSchema: 'default' | 'bpmf' = 'default';
   public switches = [
     'thumbEnd',
     'thumbMid',

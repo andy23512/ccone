@@ -1,5 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { BPMFSymbol } from '../../models/bpmf.enum';
+import {
+  BPMFSymbol,
+  CONSONANTS,
+  MEDIALS,
+  RHYMES,
+  Rhyme,
+  TONES,
+} from '../../models/bpmf.enum';
 import { DirectionMap } from '../../models/layout.models';
 
 function sin(deg: number) {
@@ -22,6 +29,26 @@ const r2 = 167;
 export class SwitchComponent {
   @Input() public d: Partial<DirectionMap<BPMFSymbol | string>> = {};
   @Input() public highlightedKeys: (BPMFSymbol | string)[] = [];
+  @Input() public colorSchema: 'default' | 'bpmf' = 'default';
+
+  public keyColor(key: BPMFSymbol | string | undefined) {
+    if (this.colorSchema === 'bpmf') {
+      if (CONSONANTS.includes(key as any)) {
+        return '#F44336';
+      }
+      if (MEDIALS.includes(key as any)) {
+        return '#4CAF50';
+      }
+      if (RHYMES.includes(key as any)) {
+        return '#2196F3';
+      }
+      if (TONES.includes(key as any)) {
+        return '#FFEB3B';
+      }
+      return '#9E9E9E';
+    }
+    return key && this.highlightedKeys.includes(key) ? '#43e272' : '#8099E5';
+  }
 
   public sectorPath(d: number) {
     return [
