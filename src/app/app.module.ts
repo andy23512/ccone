@@ -13,6 +13,8 @@ import { SymbolTrainingPageComponent } from './pages/symbol-training-page/symbol
 import { ChordTrainingPageComponent } from './pages/chord-training-page/chord-training-page.component';
 import { BpmfPipe } from './pipes/bpmf.pipe';
 import { ComboMeterComponent } from './components/combo-meter/combo-meter.component';
+import { LayoutViewerPageComponent } from './pages/layout-viewer-page/layout-viewer-page.component';
+import { LayoutViewerComponent } from './components/layout-viewer/layout-viewer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ComboMeterComponent } from './components/combo-meter/combo-meter.compon
     ChordTrainingPageComponent,
     BpmfPipe,
     ComboMeterComponent,
+    LayoutViewerPageComponent,
+    LayoutViewerComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,11 +27,11 @@ const r2 = 167;
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SwitchComponent {
-  @Input() public d: Partial<DirectionMap<BPMFSymbol | string>> = {};
+  @Input() public d: Partial<DirectionMap<BPMFSymbol | string | null>> = {};
   @Input() public highlightedKeys: (BPMFSymbol | string)[] = [];
   @Input() public colorSchema: 'default' | 'bpmf' = 'default';
 
-  public keyColor(key: BPMFSymbol | string | undefined) {
+  public keyColor(key: BPMFSymbol | string | null | undefined) {
     if (this.colorSchema === 'bpmf') {
       if (CONSONANTS.includes(key as any)) {
         return '#F44336';

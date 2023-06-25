@@ -8,7 +8,7 @@ import { Layout } from '../../models/layout.models';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-  @Input() public layout: Layout<BPMFSymbol | string> = {};
+  @Input() public layout: Layout<BPMFSymbol | string | null> = {};
   @Input() public highlightedKeys: (BPMFSymbol | string)[] = [];
   @Input() public colorSchema: 'default' | 'bpmf' = 'default';
   public switches = [

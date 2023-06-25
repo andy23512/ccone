@@ -9229,6 +9229,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ngx-serial@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-serial/-/ngx-serial-1.0.1.tgz#a9f8426bf5c76ba34f7d50a3d2ef76b21ee86124"
+  integrity sha512-fjTUgzChJZaw74QP664E2wG04Cn29iVcjEI991UyQ0I6Yss/RocKjQzpm4z1Qr86KHerqM1ZT3fpjKvwln6kYg==
+  dependencies:
+    tslib "^2.1.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
