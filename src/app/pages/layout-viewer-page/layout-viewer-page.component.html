@@ -1,4 +1,6 @@
-<button (click)="connect()">Connect</button>
-<button (click)="close()">Close</button>
 <button (click)="getKeyMaps()">Get Key Maps</button>
-<ccone-layout-viewer [hardwareKeyMaps]="respondedKeyMaps"></ccone-layout-viewer>
+<button (click)="getKeyboardLayoutMap()">Get Keyboard Layout Map</button>
+<ccone-layout-viewer
+  [keyMaps]="keyMaps"
+  [keyboardLayoutMap]="keyboardLayoutMap"
+></ccone-layout-viewer>
