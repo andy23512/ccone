@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, map } from 'rxjs';
-import { KeyMap } from '../models/key-map.model';
 import { NgxSerial } from 'ngx-serial';
+import { Observable, Subject, map } from 'rxjs';
 import { ACTIONS } from '../models/actions.const';
+import { KeyMap } from '../models/key-map.model';
 
 @Injectable({
   providedIn: 'root',

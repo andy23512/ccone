@@ -1,21 +1,13 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-import { Action } from 'src/app/models/action.model';
-import { ACTIONS } from 'src/app/models/actions.const';
+import { Component, Input, OnChanges } from '@angular/core';
 import { KeyMap } from 'src/app/models/key-map.model';
 import { KEY_ID_LAYOUT } from 'src/app/models/layout.const';
 import {
   DirectionMap,
-  Layout,
   FingerMap,
   HandMap,
+  Layout,
 } from 'src/app/models/layout.models';
-import { WritingSystemKeyCode } from 'src/app/models/writing-system-key-code.models';
+import { SystemKeyboardMap } from 'src/app/models/system-key-map.model';
 
 function layoutMap<T, U>(layout: Layout<T>, func: (arg: T) => U): Layout<U> {
   const output: Layout<U> = {};
@@ -39,9 +31,8 @@ function layoutMap<T, U>(layout: Layout<T>, func: (arg: T) => U): Layout<U> {
   styleUrls: ['./layout-viewer.component.css'],
 })
 export class LayoutViewerComponent implements OnChanges {
-  @Input() public keyMaps: KeyMap[] = [];
-  @Input() public keyboardLayoutMap: Map<WritingSystemKeyCode, string> =
-    new Map();
+  @Input() public keyMaps: KeyMap[] | null = null;
+  @Input() public systemKeyboardMap: SystemKeyboardMap | null = null;
   public hardwareLayout: Layout<string | null> = {};
   public softwareLayout: Layout<string | null> = {};
 
@@ -49,21 +40,19 @@ export class LayoutViewerComponent implements OnChanges {
     this.hardwareLayout = layoutMap(
       KEY_ID_LAYOUT,
       (keyId) =>
-        this.keyMaps.find((key) => key?.index === keyId)?.action
+        this.keyMaps?.find((key) => key?.index === keyId)?.action
           ?.representation || null
     );
     this.softwareLayout = layoutMap(KEY_ID_LAYOUT, (keyId) => {
-      const action = this.keyMaps.find((key) => key?.index === keyId)?.action;
+      const action = this.keyMaps?.find((key) => key?.index === keyId)?.action;
       if (action) {
         if (action.writingSystemKeyCode) {
-          const outputCharacter = this.keyboardLayoutMap.get(
-            action.writingSystemKeyCode
-          );
+          const outputCharacter =
+            this.systemKeyboardMap?.keyMap?.[action.writingSystemKeyCode].value;
           if (outputCharacter) {
             return outputCharacter;
           }
         }
-        return action.representation;
       }
       return null;
     });

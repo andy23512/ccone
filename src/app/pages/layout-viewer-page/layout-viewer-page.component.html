@@ -1,6 +1,13 @@
-<button (click)="getKeyMaps()">Get Key Maps</button>
-<button (click)="getKeyboardLayoutMap()">Get Keyboard Layout Map</button>
+<button (click)="getKeyMaps()">Get CC1 Key Maps</button>
+<input
+  #fileInput
+  accept=".json"
+  type="file"
+  style="display: none"
+  (change)="onFileInputChange($event)"
+/>
+<button (click)="fileInput.click()">Import OS Key Map</button>
 <ccone-layout-viewer
   [keyMaps]="keyMaps"
-  [keyboardLayoutMap]="keyboardLayoutMap"
+  [systemKeyboardMap]="systemKeyboardMap"
 ></ccone-layout-viewer>
