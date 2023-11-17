@@ -28,10 +28,10 @@ export const BPMF_LAYOUT: Layout<BPMFSymbol | string> = {
   right: {
     index: { w: Medial.I, s: Medial.U, e: Tone.Tone1, n: '⌤' },
     thumbEnd: { w: Rhyme.A, s: Rhyme.O, e: Rhyme.ER, n: Rhyme.E },
-    thumbMid: { w: Rhyme.AI, s: Rhyme.EI, n: Rhyme.AO, e: 'dup' },
-    thumbTip: { w: Rhyme.OU, s: Rhyme.AN, e: Rhyme.EN, n: Rhyme.ANG },
-    middle: { w: Medial.UE, s: Tone.Tone2, e: Tone.Tone3, n: Tone.Tone4 },
-    ring: { w: Rhyme.ERR, s: Rhyme.ENG, e: Tone.Tone5, n: '⌃' },
+    thumbMid: { w: Rhyme.AI, s: Rhyme.EI, e: Rhyme.AO, n: Rhyme.OU },
+    thumbTip: { w: Rhyme.AN, s: Rhyme.EN, e: Rhyme.ANG, n: Rhyme.ENG },
+    middle: { w: Tone.Tone2, s: Tone.Tone3, e: Tone.Tone4, n: Tone.Tone5 },
+    ring: { w: Medial.UE, s: Rhyme.ERR, e: ';', n: '⌃' },
   },
 };
 
@@ -72,6 +72,7 @@ export const NEED_REMAP_KEYS: string[] = [
   'RMU',
   'RMR',
   'RMD',
+  'dup',
 ];
 
 export const REMAPPED_LAYOUT: Layout<string> = {
@@ -82,11 +83,11 @@ export const REMAPPED_LAYOUT: Layout<string> = {
     index: { e: 'r', s: 'e', w: '|', n: '⌫' },
     middle: { e: 'i', s: 'o', w: '.', n: '{' },
     ring: { e: "'", s: 'u', w: ',', n: '⌃' },
-    ringMid: { e: '<', s: '+', w: 'LW', n: '=' },
+    ringMid: { e: '<', s: '+', w: 'LW', n: 'dup' },
   },
   right: {
     thumbEnd: { w: '$', s: ']', e: ')', n: '?' },
-    thumbMid: { w: 'b', s: 'q', e: 'dup', n: 'x' },
+    thumbMid: { w: 'b', s: 'q', e: '=', n: 'x' },
     thumbTip: { w: 'f', s: 'd', e: 'h', n: 'p' },
     index: { w: 'a', s: 't', e: '(R)␣', n: '⌤' },
     middle: { w: 'l', s: 'n', e: 'j', n: '}' },
