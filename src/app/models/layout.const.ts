@@ -77,20 +77,25 @@ export const NEED_REMAP_KEYS: string[] = [
 
 export const REMAPPED_LAYOUT: Layout<string> = {
   left: {
-    thumbEnd: { e: '/', s: '[', w: '(', n: '-' },
-    thumbMid: { e: 'w', s: 'z', w: 'g', n: '#' },
+    thumbEnd: { e: '7', s: '8', w: '9', n: '0', c: '6' },
+    thumbMid: { e: 'w', s: 'z', w: 'g', n: '/' },
     thumbTip: { e: 'k', s: 'c', w: 'm', n: 'v' },
-    index: { e: 'r', s: 'e', w: '|', n: '⌫' },
-    middle: { e: 'i', s: 'o', w: '.', n: '{' },
+    index: { e: 'r', s: 'e', w: '-', n: '⌫' },
+    middle: { e: 'i', s: 'o', w: '.', n: '[' },
     ring: { e: "'", s: 'u', w: ',', n: '⌃' },
-    ringMid: { e: '<', s: '+', w: 'LW', n: 'dup' },
+    ringMid: {
+      e: '<',
+      s: '+',
+      w: 'LW',
+      n: 'dup',
+    },
   },
   right: {
-    thumbEnd: { w: '$', s: ']', e: ')', n: '?' },
-    thumbMid: { w: 'b', s: 'q', e: '=', n: 'x' },
+    thumbEnd: { w: '2', s: '3', e: '4', n: '5', c: '1' },
+    thumbMid: { w: 'b', s: 'q', e: '\\', n: 'x' },
     thumbTip: { w: 'f', s: 'd', e: 'h', n: 'p' },
     index: { w: 'a', s: 't', e: '(R)␣', n: '⌤' },
-    middle: { w: 'l', s: 'n', e: 'j', n: '}' },
+    middle: { w: 'l', s: 'n', e: 'j', n: ']' },
     ring: { w: 'y', s: 's', e: ';', n: '⌃' },
     ringMid: { w: '>', s: '⎋', e: 'RW', n: '⇥' },
   },
