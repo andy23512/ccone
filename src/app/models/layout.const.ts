@@ -30,8 +30,8 @@ export const BPMF_LAYOUT: Layout<BPMFSymbol | string> = {
     thumbEnd: { w: Rhyme.A, s: Rhyme.O, e: Rhyme.ER, n: Rhyme.E },
     thumbMid: { w: Rhyme.AI, s: Rhyme.EI, e: Rhyme.AO, n: Rhyme.OU },
     thumbTip: { w: Rhyme.AN, s: Rhyme.EN, e: Rhyme.ANG, n: Rhyme.ENG },
-    middle: { w: Tone.Tone2, s: Tone.Tone3, e: Tone.Tone4, n: Tone.Tone5 },
-    ring: { w: Medial.UE, s: Rhyme.ERR, e: ';', n: '⌃' },
+    middle: { w: Medial.UE, s: Tone.Tone2, e: Tone.Tone3, n: ']' },
+    ring: { w: Rhyme.ERR, s: Tone.Tone4, e: Tone.Tone5, n: '⌃' },
   },
 };
 
@@ -78,14 +78,14 @@ export const NEED_REMAP_KEYS: string[] = [
 export const REMAPPED_LAYOUT: Layout<string> = {
   left: {
     thumbEnd: { e: '7', s: '8', w: '9', n: '0', c: '6' },
-    thumbMid: { e: 'w', s: 'z', w: 'g', n: '/' },
+    thumbMid: { e: 'w', s: 'z', w: 'g', n: '=' },
     thumbTip: { e: 'k', s: 'c', w: 'm', n: 'v' },
     index: { e: 'r', s: 'e', w: '-', n: '⌫' },
     middle: { e: 'i', s: 'o', w: '.', n: '[' },
     ring: { e: "'", s: 'u', w: ',', n: '⌃' },
     ringMid: {
       e: '<',
-      s: '+',
+      s: '/',
       w: 'LW',
       n: 'dup',
     },
